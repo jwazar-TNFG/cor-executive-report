@@ -70,14 +70,16 @@
             padding: 25px;
             border: 1px solid #e2e8f0;
             margin-bottom: 25px;
+            overflow-x: auto;
         }
         .chart-container h3 { font-size: 1rem; color: #475569; margin-bottom: 15px; }
         
         .table-container {
             background: #fafbfc;
             border-radius: 12px;
-            overflow: hidden;
+            overflow-x: auto;
             border: 1px solid #e2e8f0;
+            -webkit-overflow-scrolling: touch;
         }
         table { width: 100%; border-collapse: collapse; }
         th { 
@@ -144,6 +146,32 @@
         @media print {
             body { background: white; }
             .page { box-shadow: none; margin: 0; border-radius: 0; }
+        }
+        
+        @media (max-width: 768px) {
+            .header { padding: 25px 20px; }
+            .header h1 { font-size: 1.6rem; }
+            .header p { font-size: 0.9rem; }
+            .content { padding: 20px; }
+            .kpi-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+            .kpi { padding: 16px; }
+            .kpi .value { font-size: 1.8rem; }
+            .section h2 { font-size: 1.1rem; }
+            .two-col { grid-template-columns: 1fr; }
+            .chart-container { padding: 15px; }
+            table { font-size: 0.8rem; }
+            th, td { padding: 10px 12px; }
+            .insights { padding: 18px; }
+            .insights li { font-size: 0.9rem; }
+            .footer { padding: 15px 20px; }
+        }
+        
+        @media (max-width: 480px) {
+            .header h1 { font-size: 1.4rem; }
+            .kpi .value { font-size: 1.5rem; }
+            .kpi .label { font-size: 0.7rem; }
+            th, td { padding: 8px 10px; font-size: 0.75rem; }
+            .badge { padding: 3px 6px; font-size: 0.65rem; }
         }
     </style>
 </head>
