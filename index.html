@@ -443,14 +443,15 @@
             `;
         });
         
-        // Location Chart - All locations
+        // Location Chart - All locations sorted by volume (highest at top)
+        const locSorted = [...locations].sort((a, b) => a[1] - b[1]); // ascending so highest ends up at top
         new Chart(document.getElementById('locationChart'), {
             type: 'bar',
             data: {
-                labels: locations.map(l => l[0].replace('COR ','')),
+                labels: locSorted.map(l => l[0].replace('COR ','')),
                 datasets: [{
                     label: 'Cases',
-                    data: locations.map(l => l[1]),
+                    data: locSorted.map(l => l[1]),
                     backgroundColor: '#0066CC',
                     borderRadius: 4
                 }]
