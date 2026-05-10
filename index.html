@@ -152,26 +152,50 @@
             .header { padding: 25px 20px; }
             .header h1 { font-size: 1.6rem; }
             .header p { font-size: 0.9rem; }
-            .content { padding: 20px; }
-            .kpi-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-            .kpi { padding: 16px; }
-            .kpi .value { font-size: 1.8rem; }
-            .section h2 { font-size: 1.1rem; }
+            .content { padding: 15px; }
+            .kpi-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+            .kpi { padding: 14px 10px; }
+            .kpi .value { font-size: 1.6rem; }
+            .kpi .label { font-size: 0.75rem; }
+            .section h2 { font-size: 1rem; }
             .two-col { grid-template-columns: 1fr; }
-            .chart-container { padding: 15px; }
-            table { font-size: 0.8rem; }
-            th, td { padding: 10px 12px; }
-            .insights { padding: 18px; }
-            .insights li { font-size: 0.9rem; }
-            .footer { padding: 15px 20px; }
+            .chart-container { padding: 12px; }
+            .table-container { 
+                margin: 0 -15px; 
+                border-radius: 0;
+                border-left: none;
+                border-right: none;
+            }
+            table { font-size: 0.75rem; min-width: 100%; }
+            th, td { padding: 8px 10px; white-space: nowrap; }
+            th:first-child, td:first-child { position: sticky; left: 0; background: inherit; z-index: 1; }
+            tr:nth-child(odd) td:first-child { background: #fafbfc; }
+            tr:nth-child(even) td:first-child { background: white; }
+            tr:hover td:first-child { background: #f1f5f9; }
+            th:first-child { background: #0066CC; }
+            .insights { padding: 15px; }
+            .insights li { font-size: 0.85rem; padding: 6px 0; }
+            .footer { padding: 15px 20px; font-size: 0.7rem; }
+            .page { margin: 0 0 20px 0; border-radius: 0; }
         }
         
         @media (max-width: 480px) {
-            .header h1 { font-size: 1.4rem; }
-            .kpi .value { font-size: 1.5rem; }
-            .kpi .label { font-size: 0.7rem; }
-            th, td { padding: 8px 10px; font-size: 0.75rem; }
-            .badge { padding: 3px 6px; font-size: 0.65rem; }
+            .header { padding: 20px 15px; }
+            .header h1 { font-size: 1.3rem; }
+            .header p { font-size: 0.8rem; }
+            .content { padding: 12px; }
+            .kpi-grid { gap: 8px; }
+            .kpi { padding: 12px 8px; }
+            .kpi .value { font-size: 1.4rem; }
+            .kpi .label { font-size: 0.65rem; }
+            .kpi .change { font-size: 0.65rem; padding: 3px 6px; }
+            .section { margin-bottom: 25px; }
+            .section h2 { font-size: 0.95rem; }
+            th, td { padding: 6px 8px; font-size: 0.7rem; }
+            .badge { padding: 2px 5px; font-size: 0.6rem; }
+            .table-container { margin: 0 -12px; }
+            .insights h3 { font-size: 0.95rem; }
+            .insights li { font-size: 0.8rem; padding-left: 18px; }
         }
     </style>
 </head>
